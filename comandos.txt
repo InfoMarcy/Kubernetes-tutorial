@@ -24,3 +24,6 @@
 #open in the browser using commandline
 8. open http://10.51.58.238:32123
    open http://<localhost>:<NodePort>
+
+#escale a replication controller
+9. kubectl scale rc web --replicas=20
