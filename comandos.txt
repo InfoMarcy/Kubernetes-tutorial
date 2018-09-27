@@ -1,0 +1,26 @@
+#Create a pod using kubectl
+1. kubectl create -f pod.yaml
+
+#Check the pod
+2. kubectl get pods
+
+#Describe the pod
+3 kubectl describe pod mypod
+
+#expose a pod to the outside world
+4. kubectl expose pod mypod --type=NodePort
+
+#get the service
+5. kubectl get svc
+
+#Describe our service
+6. kubectl describe svc mypod
+
+
+
+#Get Nodes 
+7. kubectl get nodes
+
+#open in the browser using commandline
+8. open http://10.51.58.238:32123
+   open http://<localhost>:<NodePort>
