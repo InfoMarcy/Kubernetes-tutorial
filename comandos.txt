@@ -25,3 +25,10 @@
 
 #escale a replication controller
 9. kubectl scale rc web --replicas=20
+
+
+#multiples create on kubernetes
+10.  kubectl create -f colorpod.yaml -f ColorReplicationController.yaml
+
+
+ 

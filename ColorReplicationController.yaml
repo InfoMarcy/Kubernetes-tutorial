@@ -1,0 +1,84 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: red
+  labels:
+     name: red
+     color: red
+     app: red-app
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+         name: red
+         color: red
+    spec: 
+      containers:
+        - name: red
+          image: janakiramm/color
+          env:
+           - name: "color"
+             value: "red"
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: blue
+  labels:
+     name: blue
+     color: blue
+     app: blue-app
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+         name: blue
+         color: blue
+    spec: 
+      containers:
+        - name: blue
+          image: janakiramm/color
+          env:
+           - name: "color"
+             value: "blue"
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: green
+  labels:
+     name: green
+     color: green
+     app: green-app
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+         name: green
+         color: green
+    spec: 
+      containers:
+        - name: green
+          image: janakiramm/color
+          env:
+           - name: "color"
+             value: "green"
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+
+---
