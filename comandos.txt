@@ -31,4 +31,16 @@
 10.  kubectl create -f colorpod.yaml -f ColorReplicationController.yaml
 
 
- 
+
+kubectl create -f MongoDbPod.yaml 
+kubectl create -f MongoDbService.yaml
+kubectl create -f webPodforMongo.yaml
+
+kubectl create -f webForMongoReplicationController.yaml
+kubectl create -f WebServiceforMongo.yaml
+
+
+#get inside of the shell of the mongo-web
+11.  kubectl exec -it mongo-web /bin/bash
+
+

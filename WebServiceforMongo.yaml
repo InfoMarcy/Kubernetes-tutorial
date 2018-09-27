@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-web
+spec:
+  selector:
+    app: todoapp
+    name: mongo-web
+  type: NodePort
+  ports:
+  - protocol: TCP
+    name: http
+    port: 80
+    targetPort: 3000
