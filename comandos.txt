@@ -16,8 +16,6 @@
 #Describe our service
 6. kubectl describe svc mypod
 
-
-
 #Get Nodes 
 7. kubectl get nodes
 
