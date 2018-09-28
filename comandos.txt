@@ -4,6 +4,9 @@
 #Check the pod
 2. kubectl get pods
 
+#list the pods with labels
+2. kubectl get pods --show-labels
+
 #Describe the pod
 3 kubectl describe pod mypod
 
@@ -42,5 +45,41 @@ kubectl create -f WebServiceforMongo.yaml
 
 #get inside of the shell of the mongo-web
 11.  kubectl exec -it mongo-web /bin/bash
+
+#Deployments
+
+#run a deployment 
+12. kubectl run update-demo --image=gcr.io/google_containers/update-demo:nautilus --port=80 -l name=update-demo
+
+#scale a deployment
+13. kubectl scale deployment/<deployment name> --replicas=4
+
+#edit a deployment
+14. kubectl edit deployment/<deployment name>
+
+Console
+ Insert =  i
+ Save Changes = esc + :wq!
+
+
+# undo. deployment
+15. kubectl rollout undo deployment/<deployment name>
+
+#delete a deployment
+16. kubectl delete deployment <deployment name>
+
+#list the pods with labels
+17. kubectl get pods --show-labels
+
+#list the replicas set
+18. kubectl get rs --show-labels
+
+#Change or update the image of a deployment
+19. kubectl set image deployment/j-hello j-hello=janakiramm/j-hello:2
+
+#check the history of the rollouts
+20. kubectl rollout history deployment/j-hello
+
+
 
 
