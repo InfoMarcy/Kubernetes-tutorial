@@ -87,8 +87,12 @@ Console
 22. kubectl rollout status deploy/<deployment name>
 
 #create a loop
-21 . while true; do curl http://10.51.58.238:31005; echo ""; sleep 1; done
+23. while true; do curl http://10.51.58.238:31005; echo ""; sleep 1; done
 
 Amazon EBS for kubernetes storage
 
+
+#Persistent volumes
+24. kubectl get pv
+25. kubectl get pvc
 
